@@ -12,3 +12,7 @@ export class HomepageComponent implements AfterViewInit {
       .body.style.backgroundColor = '#FFF0CE';
   }
 }
+
+
+//https://colorhunt.co/palette/0c356a0174beffc436fff0ce
+//https://colorhunt.co/palette/ff9843ffdd9586a7fc3468c0
