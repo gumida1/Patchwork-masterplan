@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <div class="row" style="padding-top: 10px">
+  <div class="row align-items-center" style="padding-top: 10px">
     <div class="col-sm-6">
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="row justify-content-center">
@@ -89,19 +89,18 @@
     </div>
 
     <div class="col-sm-6">
-      <div [ngStyle]="{'background-color': (color_style == 'first') ? '#CBFFA9' : '#FF8080'}">
-        <p>Values patch 1: {{ patch1.price }}; {{ patch1.size }}; {{ patch1.buttons }}; {{ patch1.billings }}; {{patch1.time}}</p>
-        <p>Final value patch 1: {{result1}}</p>
-      </div>
-      <hr>
-      <div [ngStyle]="{'background-color': (color_style == 'second') ? '#CBFFA9' : '#FF8080'}">
-        <p>Values patch 2: {{ patch2.price }}; {{ patch2.size }}; {{ patch2.buttons }}; {{ patch2.billings }}; {{patch2.time}}</p>
-        <p>Final value patch 2: {{result2}}</p>
-      </div>
-      <hr>
-      <div [ngStyle]="{'background-color': (color_style == 'third') ? '#CBFFA9' : '#FF8080'}">
-        <p>Values patch 3: {{ patch3.price }}; {{ patch3.size }}; {{ patch3.buttons }}; {{ patch3.billings }}; {{patch3.time}}</p>
-        <p>Final value patch 3: {{result3}}</p>
+      <div class="container">
+        <div [ngStyle]="{'background-color': (color_style == 'first') ? '#CBFFA9' : '#FF8080'}">
+          <h6>Final value patch 1:      {{result1}}</h6>
+        </div>
+        <hr>
+        <div [ngStyle]="{'background-color': (color_style == 'second') ? '#CBFFA9' : '#FF8080'}">
+          <h6>Final value patch 2:      {{result2}}</h6>
+        </div>
+        <hr>
+        <div [ngStyle]="{'background-color': (color_style == 'third') ? '#CBFFA9' : '#FF8080'}">
+          <h6>Final value patch 3:      {{result3}}</h6>
+        </div>
       </div>
     </div>
   </div>
