@@ -6,43 +6,99 @@
   </div>
 
   <div class="row" style="padding-top: 10px">
-    <div class="col-sm-4 offset-1">
+    <div class="col-sm-6">
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <div id="data">
-          <div class="form-group">
-            <label for="price">Price:</label>
-            <input type="number" ngModel id="price" class="form-control" name="price"/>
+        <div class="row justify-content-center">
+          <div class="col-sm-3">
+              <div class="form-group">
+                <label for="price1">Price 1:</label>
+                <input type="number" ngModel id="price1" class="form-control" name="price1"/>
+              </div>
+
+              <div class="form-group">
+                <label for="size1">Size 1:</label>
+                <input type="number" ngModel id="size1" class="form-control" name="size1"/>
+              </div>
+
+              <div class="form-group">
+                <label for="buttons1">Buttons 1:</label>
+                <input type="number" ngModel id="buttons1" class="form-control" name="buttons1"/>
+              </div>
+
+              <div class="form-group">
+                <label for="billings1">Billings 1:</label>
+                <input type="number" ngModel id="billings1" class="form-control" name="billings1"/>
+              </div>
           </div>
 
-          <div class="form-group">
-            <label for="size">Size:</label>
-            <input type="number" ngModel id="size" class="form-control" name="size"/>
+          <div class="col-sm-3">
+              <div class="form-group">
+                <label for="price2">Price 2:</label>
+                <input type="number" ngModel id="price2" class="form-control" name="price2"/>
+              </div>
+
+              <div class="form-group">
+                <label for="size2">Size 2:</label>
+                <input type="number" ngModel id="size2" class="form-control" name="size2"/>
+              </div>
+
+              <div class="form-group">
+                <label for="buttons2">Buttons 2:</label>
+                <input type="number" ngModel id="buttons2" class="form-control" name="buttons2"/>
+              </div>
+
+              <div class="form-group">
+                <label for="billings2">Billings 2:</label>
+                <input type="number" ngModel id="billings2" class="form-control" name="billings2"/>
+              </div>
           </div>
 
-          <div class="form-group">
-            <label for="buttons">Buttons:</label>
-            <input type="number" ngModel id="buttons" class="form-control" name="buttons"/>
+          <div class="col-sm-3">
+              <div class="form-group">
+                <label for="price3">Price 3:</label>
+                <input type="number" ngModel id="price3" class="form-control" name="price3"/>
+              </div>
+
+              <div class="form-group">
+                <label for="size3">Size 3:</label>
+                <input type="number" ngModel id="size3" class="form-control" name="size3"/>
+              </div>
+
+              <div class="form-group">
+                <label for="buttons3">Buttons 3:</label>
+                <input type="number" ngModel id="buttons3" class="form-control" name="buttons3"/>
+              </div>
+
+              <div class="form-group">
+                <label for="billings3">Billings 3:</label>
+                <input type="number" ngModel id="billings3" class="form-control" name="billings3"/>
+              </div>
           </div>
 
-          <div class="form-group">
-            <label for="billings">Billings:</label>
-            <input type="number" ngModel id="billings" class="form-control" name="billings"/>
-          </div>
 
         </div>
-        <button type="submit" class="btn btn-success">Compute value</button>
+        <div class="row justify-content-center">
+          <button type="submit" class="btn btn-success justify-content-center">Compute value</button>
+        </div>
+
       </form>
     </div>
 
-    <div class="col-sm-6 offset-1">
-      Hodnoty :
-
-      {{ patch.price }}
-      {{ patch.size }}
-      {{ patch.buttons }}
-      {{ patch.billings }}
+    <div class="col-sm-6">
+      <div [ngStyle]="{'background-color': (color_style == 'first') ? '#CBFFA9' : '#FF8080'}">
+        <p>Values patch 1: {{ patch1.price }}; {{ patch1.size }}; {{ patch1.buttons }}; {{ patch1.billings }}</p>
+        <p>Final value patch 1: {{result1}}</p>
+      </div>
       <hr>
-      Výsledek: {{result}}
+      <div [ngStyle]="{'background-color': (color_style == 'second') ? '#CBFFA9' : '#FF8080'}">
+        <p>Values patch 2: {{ patch2.price }}; {{ patch2.size }}; {{ patch2.buttons }}; {{ patch2.billings }}</p>
+        <p>Final value patch 2: {{result2}}</p>
+      </div>
+      <hr>
+      <div [ngStyle]="{'background-color': (color_style == 'third') ? '#CBFFA9' : '#FF8080'}">
+        <p>Values patch 3: {{ patch3.price }}; {{ patch3.size }}; {{ patch3.buttons }}; {{ patch3.billings }}</p>
+        <p>Final value patch 3: {{result3}}</p>
+      </div>
     </div>
   </div>
 </div>
