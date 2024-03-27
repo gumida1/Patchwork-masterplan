@@ -1,18 +1,23 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">
-        Patchwork masterplan
-      </a>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #86A7FC;">
 
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a routerLink="/recipes">Patchwork GUI</a></li>
-        <li routerLinkActive="active" ><a routerLink="/calculator">Simple calculator</a></li>
+      <a routerLink="/home" class="navbar-brand">
+        <img src="/assets/patchwork-knoflik-2.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Patchwork master-plan
+      </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li routerLinkActive="active" class="nav-item active">
+          <a routerLink="/gui" class="nav-link">Patchwork GUI</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item active">
+          <a routerLink="/calculator" class="nav-link">Simple calculator</a>
+        </li>
       </ul>
     </div>
 
-  </div>
 
 </nav>

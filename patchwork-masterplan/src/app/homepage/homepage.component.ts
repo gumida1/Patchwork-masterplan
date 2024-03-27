@@ -1,11 +1,11 @@
 import {AfterViewInit, Component, ElementRef} from '@angular/core';
 
 @Component({
-  selector: 'app-calculator',
-  templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css']
+  selector: 'app-homepage',
+  templateUrl: './homepage.component.html',
+  styleUrls: ['./homepage.component.css']
 })
-export class CalculatorComponent implements AfterViewInit {
+export class HomepageComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument
