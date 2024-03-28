@@ -23,7 +23,10 @@ export class CalculatorComponent implements AfterViewInit {
   result2 = 0;
   result3 = 0;
   color_style = '';
+  time_usage = '';
+  submited = false;
   onSubmit(form: NgForm) {
+    this.submited = true;
     this.patch1.price = form.value.price1;
     this.patch1.size = form.value.size1;
     this.patch1.buttons = form.value.buttons1;
@@ -42,11 +45,11 @@ export class CalculatorComponent implements AfterViewInit {
     this.patch3.billings = form.value.billings;
     this.patch3.time = form.value.time3;
 
+    this.time_usage = '';
     this.compute_best_patch();
   }
   compute_best_patch() {
-    let max = -69;
-    let min = 420;
+    let max;
     this.result1 = (this.patch1.buttons * this.patch1.billings) - this.patch1.price + (this.patch1.size * 2) - this.patch1.time;
     this.result2 = (this.patch2.buttons * this.patch2.billings) - this.patch2.price + (this.patch2.size * 2) - this.patch2.time;
     this.result3 = (this.patch3.buttons * this.patch3.billings) - this.patch3.price + (this.patch3.size * 2) - this.patch3.time;
@@ -57,10 +60,22 @@ export class CalculatorComponent implements AfterViewInit {
 
     if (max == this.result1) {
       this.color_style = 'first';
+      if (this.result1 + this.patch1.time < this.result2 + this.patch2.time ||
+        this.result1 + this.patch1.time < this.result3 + this.patch3.time) {
+        this.time_usage = "first";
+      }
     } else if (max == this.result2) {
       this.color_style = 'second';
+      if (this.result2 + this.patch2.time < this.result1 + this.patch1.time ||
+        this.result2 + this.patch2.time < this.result3 + this.patch3.time) {
+        this.time_usage = "second";
+      }
     } else if (max == this.result3) {
       this.color_style = 'third';
+      if (this.result3 + this.patch3.time < this.result2 + this.patch2.time ||
+        this.result3 + this.patch3.time < this.result1 + this.patch1.time) {
+        this.time_usage = "third";
+      }
     }
     this.results = [];
   }

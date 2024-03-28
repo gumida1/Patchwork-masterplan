@@ -91,15 +91,24 @@
     <div class="col-sm-6">
       <div class="container">
         <div [ngStyle]="{'background-color': (color_style == 'first') ? '#CBFFA9' : '#FF8080'}">
-          <h6>Final value patch 1:      {{result1}}</h6>
+          <h6>
+            Final value patch 1:      {{result1}}
+            <i *ngIf="time_usage === 'first'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
+          </h6>
         </div>
         <hr>
         <div [ngStyle]="{'background-color': (color_style == 'second') ? '#CBFFA9' : '#FF8080'}">
-          <h6>Final value patch 2:      {{result2}}</h6>
+          <h6>
+            Final value patch 2:      {{result2}}
+            <i *ngIf="time_usage === 'second'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
+          </h6>
         </div>
         <hr>
         <div [ngStyle]="{'background-color': (color_style == 'third') ? '#CBFFA9' : '#FF8080'}">
-          <h6>Final value patch 3:      {{result3}}</h6>
+          <h6>
+            Final value patch 3:      {{result3}}
+            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
+          </h6>
         </div>
       </div>
     </div>
