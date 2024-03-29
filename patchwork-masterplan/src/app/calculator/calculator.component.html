@@ -6,7 +6,7 @@
   </div>
 
   <div class="row align-items-center" style="padding-top: 10px">
-    <div class="col-sm-6">
+    <div class="col-sm-5 offset-1 list-group-item list-group-item-warning">
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="row justify-content-center">
           <div class="col-sm-3">
@@ -29,6 +29,14 @@
                 <label for="time1">Time 1:</label>
                 <input type="number" ngModel id="time1" class="form-control" name="time1"/>
               </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheck1" name="check1" [(ngModel)]="patch1.bonus">
+              <label class="form-check-label" for="flexCheck1">
+                Bonus 1
+              </label>
+            </div>
+
           </div>
 
           <div class="col-sm-3">
@@ -51,6 +59,13 @@
                 <label for="time2">Time 2:</label>
                 <input type="number" ngModel id="time2" class="form-control" name="time2"/>
               </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheck2" name="check2" [(ngModel)]="patch2.bonus">
+              <label class="form-check-label" for="flexCheck2">
+                Bonus 2
+              </label>
+            </div>
           </div>
 
           <div class="col-sm-3">
@@ -73,8 +88,15 @@
                 <label for="time3">Time 3:</label>
                 <input type="number" ngModel id="time3" class="form-control" name="time3"/>
               </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheck3" name="check3" [(ngModel)]="patch3.bonus">
+              <label class="form-check-label" for="flexCheck3">
+                Bonus 3
+              </label>
+            </div>
           </div>
-          <div class="form-group">
+          <div class="form-group" style="padding-top: 10px">
             <label for="billings">Billings:</label>
             <input type="number" ngModel id="billings" class="form-control" name="billings"/>
           </div>
@@ -88,25 +110,25 @@
       </form>
     </div>
 
-    <div class="col-sm-6">
-      <div class="container">
+    <div class="col-sm-5">
+      <div class="container list-group-item list-group-item-warning">
         <div [ngStyle]="{'background-color': (color_style == 'first') ? '#CBFFA9' : '#FF8080'}">
-          <h6>
-            Final value patch 1:      {{result1}}
+          <h6 class="indented-text">
+            <span class="text-content"> Final value patch 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result1}}</span>
             <i *ngIf="time_usage === 'first'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
           </h6>
         </div>
         <hr>
         <div [ngStyle]="{'background-color': (color_style == 'second') ? '#CBFFA9' : '#FF8080'}">
-          <h6>
-            Final value patch 2:      {{result2}}
+          <h6 class="indented-text">
+            <span class="text-content">Final value patch 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result2}}</span>
             <i *ngIf="time_usage === 'second'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
           </h6>
         </div>
         <hr>
         <div [ngStyle]="{'background-color': (color_style == 'third') ? '#CBFFA9' : '#FF8080'}">
-          <h6>
-            Final value patch 3:      {{result3}}
+          <h6 class="indented-text">
+            <span class="text-content">Final value patch 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
             <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
           </h6>
         </div>

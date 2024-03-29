@@ -3,6 +3,7 @@ export class Single_patchModel {
               public size: number,
               public buttons: number,
               public billings: number,
-              public time: number
+              public time: number,
+              public bonus: boolean
   ) {}
 }

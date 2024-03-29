@@ -1,0 +1,14 @@
+h6 {
+  color: black;
+  white-space: nowrap;
+}
+
+.indented-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-content {
+  flex-grow: 1;
+}
