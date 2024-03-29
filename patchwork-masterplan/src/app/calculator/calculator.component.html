@@ -112,21 +112,21 @@
 
     <div class="col-sm-5">
       <div class="container list-group-item list-group-item-warning">
-        <div [ngStyle]="{'background-color': (color_style == 'first') ? '#CBFFA9' : '#FF8080'}">
+        <div [ngStyle]="{'background-color': (max == result1) ? '#CBFFA9' : '#FF8080'}">
           <h6 class="indented-text">
             <span class="text-content"> Final value patch 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result1}}</span>
             <i *ngIf="time_usage === 'first'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
           </h6>
         </div>
         <hr>
-        <div [ngStyle]="{'background-color': (color_style == 'second') ? '#CBFFA9' : '#FF8080'}">
+        <div [ngStyle]="{'background-color': (max == result2) ? '#CBFFA9' : '#FF8080'}">
           <h6 class="indented-text">
             <span class="text-content">Final value patch 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result2}}</span>
             <i *ngIf="time_usage === 'second'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
           </h6>
         </div>
         <hr>
-        <div [ngStyle]="{'background-color': (color_style == 'third') ? '#CBFFA9' : '#FF8080'}">
+        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
           <h6 class="indented-text">
             <span class="text-content">Final value patch 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
             <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>

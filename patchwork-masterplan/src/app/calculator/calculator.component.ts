@@ -22,9 +22,9 @@ export class CalculatorComponent implements AfterViewInit {
   result1 = 0;
   result2 = 0;
   result3 = 0;
-  color_style = '';
   time_usage = '';
   submited = false;
+  max = -69;
   onSubmit(form: NgForm) {
     this.submited = true;
     this.patch1.price = form.value.price1;
@@ -49,39 +49,37 @@ export class CalculatorComponent implements AfterViewInit {
     this.compute_best_patch();
   }
   compute_best_patch() {
-    let max;
     this.result1 = (this.patch1.buttons * this.patch1.billings) - this.patch1.price + (this.patch1.size * 2) - this.patch1.time;
     this.result2 = (this.patch2.buttons * this.patch2.billings) - this.patch2.price + (this.patch2.size * 2) - this.patch2.time;
     this.result3 = (this.patch3.buttons * this.patch3.billings) - this.patch3.price + (this.patch3.size * 2) - this.patch3.time;
 
     if (this.patch1.bonus) {
-      this.result1++;
+      this.result1 = this.result1 + 2;
     }
     if (this.patch2.bonus) {
-      this.result2++;
+      this.result2 = this.result2 + 2;
     }
     if (this.patch3.bonus) {
-      this.result3++;
+      this.result3 = this.result3 + 2;
     }
 
     this.results.push(this.result1, this.result2, this.result3);
 
-    max = this.results.reduce((a, b) => Math.max(a, b));
+    this.max = this.results.reduce((a, b) => Math.max(a, b));
 
-    if (max == this.result1) {
-      this.color_style = 'first';
+    if (this.max == this.result1) {
       if (this.result1 + this.patch1.time < this.result2 + this.patch2.time ||
         this.result1 + this.patch1.time < this.result3 + this.patch3.time) {
         this.time_usage = "first";
       }
-    } else if (max == this.result2) {
-      this.color_style = 'second';
+    }
+    if (this.max == this.result2) {
       if (this.result2 + this.patch2.time < this.result1 + this.patch1.time ||
         this.result2 + this.patch2.time < this.result3 + this.patch3.time) {
         this.time_usage = "second";
       }
-    } else if (max == this.result3) {
-      this.color_style = 'third';
+    }
+    if (this.max == this.result3) {
       if (this.result3 + this.patch3.time < this.result2 + this.patch2.time ||
         this.result3 + this.patch3.time < this.result1 + this.patch1.time) {
         this.time_usage = "third";
