@@ -4,6 +4,8 @@ export class Single_patchModel {
               public buttons: number,
               public billings: number,
               public time: number,
-              public bonus: boolean
+              public bonus: boolean,
+              public inner_value: number,
+              public best_patch: boolean
   ) {}
 }

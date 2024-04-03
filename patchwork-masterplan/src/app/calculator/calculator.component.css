@@ -27,3 +27,8 @@ h6 {
 .custom-border-right-future {
   border-left: 2px solid #FFC436; /* Change 'red' to the desired color */
 }
+
+
+.text-color {
+  color: green;
+}

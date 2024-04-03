@@ -257,7 +257,7 @@
             </div>
 
             <div style="padding-top: 10px">
-              <button type="button" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
+              <button type="button" (click)="delete_patch(6)" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
             </div>
           </div>
 
@@ -273,50 +273,51 @@
     </div>
 
     <div class="col-sm-6">
-      <div class="container list-group-item list-group-item-warning">
-        <hr>
-        <div [ngStyle]="{'background-color': (max == result1) ? '#CBFFA9' : '#FF8080'}">
-          <h6 class="indented-text">
-            <span class="text-content"> Final value patch 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result1}}</span>
-            <i *ngIf="time_usage === 'first'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
-          </h6>
+      <div class="container">
+        <div class="list-group-item list-group-item-warning ">
+          <hr>
+          <div [ngStyle]="{'background-color': (patch1.best_patch) ? '#CBFFA9' : '#FF8080'}">
+            <h6 class="indented-text">
+              <span class="text-content"> Final value patch 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result1}}</span>
+            </h6>
+          </div>
+          <hr>
+          <div [ngStyle]="{'background-color': (patch2.best_patch) ? '#CBFFA9' : '#FF8080'}">
+            <h6 class="indented-text">
+              <span class="text-content">Final value patch 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result2}}</span>
+            </h6>
+          </div>
+          <hr>
+          <div [ngStyle]="{'background-color': (patch3.best_patch) ? '#CBFFA9' : '#FF8080'}">
+            <h6 class="indented-text">
+              <span class="text-content">Final value patch 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
+            </h6>
+          </div>
+          <hr>
+          <div [ngStyle]="{'background-color': (patch4.best_patch) ? '#CBFFA9' : '#FF8080'}">
+            <h6 class="indented-text">
+              <span class="text-content">Final value patch 4: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result4}}</span>
+            </h6>
+          </div>
+          <hr>
+          <div [ngStyle]="{'background-color': (patch5.best_patch) ? '#CBFFA9' : '#FF8080'}">
+            <h6 class="indented-text">
+              <span class="text-content">Final value patch 5: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result5}}</span>
+            </h6>
+          </div>
+          <hr>
+          <div [ngStyle]="{'background-color': (patch6.best_patch) ? '#CBFFA9' : '#FF8080'}">
+            <h6 class="indented-text">
+              <span class="text-content">Final value patch 6: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result6}}</span>
+            </h6>
+          </div>
+          <hr>
         </div>
-        <hr>
-        <div [ngStyle]="{'background-color': (max == result2) ? '#CBFFA9' : '#FF8080'}">
-          <h6 class="indented-text">
-            <span class="text-content">Final value patch 2: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result2}}</span>
-            <i *ngIf="time_usage === 'second'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
-          </h6>
+
+        <div *ngIf="move" class="list-group-item list-group-item-warning" style="margin-top: 10px">
+          <span class="text-color"><i class="bi bi-info-circle"></i> Do not buy patches! Just go ahead.</span>
         </div>
-        <hr>
-        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
-          <h6 class="indented-text">
-            <span class="text-content">Final value patch 3: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
-            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
-          </h6>
-        </div>
-        <hr>
-        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
-          <h6 class="indented-text">
-            <span class="text-content">Final value patch 4: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
-            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
-          </h6>
-        </div>
-        <hr>
-        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
-          <h6 class="indented-text">
-            <span class="text-content">Final value patch 5: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
-            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
-          </h6>
-        </div>
-        <hr>
-        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
-          <h6 class="indented-text">
-            <span class="text-content">Final value patch 6: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
-            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
-          </h6>
-        </div>
-        <hr>
+
       </div>
     </div>
   </div>
