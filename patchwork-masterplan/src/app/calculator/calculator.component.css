@@ -12,3 +12,18 @@ h6 {
 .text-content {
   flex-grow: 1;
 }
+
+.btn-xs {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem; /* You can adjust the font size as needed */
+  line-height: 1.25;
+  border-radius: 0.2rem;
+}
+
+.custom-border-right {
+  border-right: 2px solid #FFC436; /* Change 'red' to the desired color */
+}
+
+.custom-border-right-future {
+  border-left: 2px solid #FFC436; /* Change 'red' to the desired color */
+}

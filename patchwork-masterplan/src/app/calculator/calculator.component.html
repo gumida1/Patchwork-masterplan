@@ -5,113 +5,276 @@
     </div>
   </div>
 
+  <div class="row justify-content-center" style="padding-top: 10px">
+    <div class="col-sm-6 list-group-item list-group-item-warning">
+      <form (ngSubmit)="onSubmit(f, f2)" #f2="ngForm">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="billings">Billings:</label>
+              <input type="number" ngModel id="billings" class="form-control" name="billings"/>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="money">Money:</label>
+              <input type="number" ngModel id="money" class="form-control" name="money"/>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="distance">Distance:</label>
+              <input type="number" ngModel id="distance" class="form-control" name="distance"/>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div class="row align-items-center" style="padding-top: 10px">
-    <div class="col-sm-5 offset-1 list-group-item list-group-item-warning">
-      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <div class="row justify-content-center">
-          <div class="col-sm-3">
+    <div class="col-sm-6 list-group-item list-group-item-warning">
+      <form (ngSubmit)="onSubmit(f, f2)" #f="ngForm">
+        <div class="row">
+          <div class="col-sm-12 d-flex justify-content-end">
+            <button type="reset" class="btn btn-danger btn-sm"><i class="bi bi-trash" style="padding-right: 5px"></i>Clear all</button>
+          </div>
+        </div>
+        <div class="row" style="padding-top: 10px">
+          <div class="col-sm-2">
+            <img src="assets/patch1_3.png" width="65" height="65">
+          </div>
+          <div class="col-sm-2">
+            <img src="assets/patch2.png" width="65" height="65">
+          </div>
+          <div class="col-sm-2">
+            <img src="assets/patch3.png" width="65" height="65">
+          </div>
+          <div class="col-sm-2">
+            <img src="assets/patch4.png" width="65" height="65">
+          </div>
+          <div class="col-sm-2">
+            <img src="assets/patch5.png" width="65" height="65">
+          </div>
+          <div class="col-sm-2">
+            <img src="assets/patch6.png" width="65" height="65">
+          </div>
+        </div>
+        <div class="row justify-content-center" style="padding-top: 10px">
+          <div class="col-sm-2 text-center custom-border-right">
               <div class="form-group">
-                <label for="price1">Price 1:</label>
+                <label for="price1">Price:</label>
                 <input type="number" ngModel id="price1" class="form-control" name="price1"/>
               </div>
 
               <div class="form-group">
-                <label for="size1">Size 1:</label>
+                <label for="size1">Size:</label>
                 <input type="number" ngModel id="size1" class="form-control" name="size1"/>
               </div>
 
               <div class="form-group">
-                <label for="buttons1">Buttons 1:</label>
+                <label for="buttons1">Buttons:</label>
                 <input type="number" ngModel id="buttons1" class="form-control" name="buttons1"/>
               </div>
 
               <div class="form-group">
-                <label for="time1">Time 1:</label>
+                <label for="time1">Time:</label>
                 <input type="number" ngModel id="time1" class="form-control" name="time1"/>
               </div>
 
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="flexCheck1" name="check1" [(ngModel)]="patch1.bonus">
               <label class="form-check-label" for="flexCheck1">
-                Bonus 1
+                Bonus
               </label>
             </div>
 
+            <div style="padding-top: 10px">
+              <button type="button" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
+            </div>
           </div>
 
-          <div class="col-sm-3">
+          <div class="col-sm-2 text-center custom-border-right">
               <div class="form-group">
-                <label for="price2">Price 2:</label>
+                <label for="price2">Price:</label>
                 <input type="number" ngModel id="price2" class="form-control" name="price2"/>
               </div>
 
               <div class="form-group">
-                <label for="size2">Size 2:</label>
+                <label for="size2">Size:</label>
                 <input type="number" ngModel id="size2" class="form-control" name="size2"/>
               </div>
 
               <div class="form-group">
-                <label for="buttons2">Buttons 2:</label>
+                <label for="buttons2">Buttons:</label>
                 <input type="number" ngModel id="buttons2" class="form-control" name="buttons2"/>
               </div>
 
               <div class="form-group">
-                <label for="time2">Time 2:</label>
+                <label for="time2">Time:</label>
                 <input type="number" ngModel id="time2" class="form-control" name="time2"/>
               </div>
 
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="flexCheck2" name="check2" [(ngModel)]="patch2.bonus">
               <label class="form-check-label" for="flexCheck2">
-                Bonus 2
+                Bonus
               </label>
+            </div>
+
+            <div style="padding-top: 10px">
+              <button type="button" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
             </div>
           </div>
 
-          <div class="col-sm-3">
+          <div class="col-sm-2 text-center custom-border-right">
               <div class="form-group">
-                <label for="price3">Price 3:</label>
+                <label for="price3">Price:</label>
                 <input type="number" ngModel id="price3" class="form-control" name="price3"/>
               </div>
 
               <div class="form-group">
-                <label for="size3">Size 3:</label>
+                <label for="size3">Size:</label>
                 <input type="number" ngModel id="size3" class="form-control" name="size3"/>
               </div>
 
               <div class="form-group">
-                <label for="buttons3">Buttons 3:</label>
+                <label for="buttons3">Buttons:</label>
                 <input type="number" ngModel id="buttons3" class="form-control" name="buttons3"/>
               </div>
 
               <div class="form-group">
-                <label for="time3">Time 3:</label>
+                <label for="time3">Time:</label>
                 <input type="number" ngModel id="time3" class="form-control" name="time3"/>
               </div>
 
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="flexCheck3" name="check3" [(ngModel)]="patch3.bonus">
               <label class="form-check-label" for="flexCheck3">
-                Bonus 3
+                Bonus
               </label>
             </div>
+
+            <div style="padding-top: 10px">
+              <button type="button" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
+            </div>
           </div>
-          <div class="form-group" style="padding-top: 10px">
-            <label for="billings">Billings:</label>
-            <input type="number" ngModel id="billings" class="form-control" name="billings"/>
+
+          <div class="col-sm-2 text-center custom-border-right custom-border-right-future">
+            <div class="form-group">
+              <label for="price4">Price:</label>
+              <input type="number" ngModel id="price4" class="form-control" name="price4"/>
+            </div>
+
+            <div class="form-group">
+              <label for="size4">Size:</label>
+              <input type="number" ngModel id="size4" class="form-control" name="size4"/>
+            </div>
+
+            <div class="form-group">
+              <label for="buttons4">Buttons:</label>
+              <input type="number" ngModel id="buttons4" class="form-control" name="buttons4"/>
+            </div>
+
+            <div class="form-group">
+              <label for="time4">Time:</label>
+              <input type="number" ngModel id="time4" class="form-control" name="time4"/>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheck4" name="check4" [(ngModel)]="patch4.bonus">
+              <label class="form-check-label" for="flexCheck4">
+                Bonus
+              </label>
+            </div>
+
+            <div style="padding-top: 10px">
+              <button type="button" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
+            </div>
           </div>
+
+          <div class="col-sm-2 text-center custom-border-right">
+            <div class="form-group">
+              <label for="price5">Price:</label>
+              <input type="number" ngModel id="price5" class="form-control" name="price5"/>
+            </div>
+
+            <div class="form-group">
+              <label for="size5">Size:</label>
+              <input type="number" ngModel id="size5" class="form-control" name="size5"/>
+            </div>
+
+            <div class="form-group">
+              <label for="buttons5">Buttons:</label>
+              <input type="number" ngModel id="buttons5" class="form-control" name="buttons5"/>
+            </div>
+
+            <div class="form-group">
+              <label for="time5">Time:</label>
+              <input type="number" ngModel id="time5" class="form-control" name="time5"/>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheck5" name="check5" [(ngModel)]="patch5.bonus">
+              <label class="form-check-label" for="flexCheck5">
+                Bonus
+              </label>
+            </div>
+
+            <div style="padding-top: 10px">
+              <button type="button" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
+            </div>
+          </div>
+
+
+          <div class="col-sm-2 text-center">
+            <div class="form-group">
+              <label for="price6">Price:</label>
+              <input type="number" ngModel id="price6" class="form-control" name="price6"/>
+            </div>
+
+            <div class="form-group">
+              <label for="size6">Size:</label>
+              <input type="number" ngModel id="size6" class="form-control" name="size6"/>
+            </div>
+
+            <div class="form-group">
+              <label for="buttons6">Buttons:</label>
+              <input type="number" ngModel id="buttons6" class="form-control" name="buttons6"/>
+            </div>
+
+            <div class="form-group">
+              <label for="time6">Time:</label>
+              <input type="number" ngModel id="time6" class="form-control" name="time6"/>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheck6" name="check6" [(ngModel)]="patch6.bonus">
+              <label class="form-check-label" for="flexCheck6">
+                Bonus
+              </label>
+            </div>
+
+            <div style="padding-top: 10px">
+              <button type="button" class="btn btn-danger btn-xs"><i class="bi bi-x"></i></button>
+            </div>
+          </div>
+
 
         </div>
 
-        <div class="row justify-content-center">
+
+         <div class="row justify-content-center" style="padding-top: 10px">
           <button type="submit" class="btn btn-success justify-content-center">Compute value</button>
-        </div>
+         </div>
 
       </form>
     </div>
 
-    <div class="col-sm-5">
+    <div class="col-sm-6">
       <div class="container list-group-item list-group-item-warning">
+        <hr>
         <div [ngStyle]="{'background-color': (max == result1) ? '#CBFFA9' : '#FF8080'}">
           <h6 class="indented-text">
             <span class="text-content"> Final value patch 1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result1}}</span>
@@ -132,6 +295,28 @@
             <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
           </h6>
         </div>
+        <hr>
+        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
+          <h6 class="indented-text">
+            <span class="text-content">Final value patch 4: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
+            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
+          </h6>
+        </div>
+        <hr>
+        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
+          <h6 class="indented-text">
+            <span class="text-content">Final value patch 5: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
+            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
+          </h6>
+        </div>
+        <hr>
+        <div [ngStyle]="{'background-color': (max == result3) ? '#CBFFA9' : '#FF8080'}">
+          <h6 class="indented-text">
+            <span class="text-content">Final value patch 6: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result3}}</span>
+            <i *ngIf="time_usage === 'third'" class="bi bi-hourglass-split" style="background-color: #FFC436"></i>
+          </h6>
+        </div>
+        <hr>
       </div>
     </div>
   </div>

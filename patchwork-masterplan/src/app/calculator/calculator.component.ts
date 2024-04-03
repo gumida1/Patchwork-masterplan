@@ -17,6 +17,9 @@ export class CalculatorComponent implements AfterViewInit {
   patch1 = new Single_patchModel(0,0,0,0, 0, false);
   patch2 = new Single_patchModel(0,0,0,0, 0, false);
   patch3 = new Single_patchModel(0,0,0,0, 0, false);
+  patch4 = new Single_patchModel(0,0,0,0, 0, false);
+  patch5 = new Single_patchModel(0,0,0,0, 0, false);
+  patch6 = new Single_patchModel(0,0,0,0, 0, false);
 
   results:number[]=[];
   result1 = 0;
@@ -25,25 +28,43 @@ export class CalculatorComponent implements AfterViewInit {
   time_usage = '';
   submited = false;
   max = -69;
-  onSubmit(form: NgForm) {
+  onSubmit(form: NgForm, form2: NgForm) {
     this.submited = true;
     this.patch1.price = form.value.price1;
     this.patch1.size = form.value.size1;
     this.patch1.buttons = form.value.buttons1;
-    this.patch1.billings = form.value.billings;
+    this.patch1.billings = form2.value.billings;
     this.patch1.time = form.value.time1;
 
     this.patch2.price = form.value.price2;
     this.patch2.size = form.value.size2;
     this.patch2.buttons = form.value.buttons2;
-    this.patch2.billings = form.value.billings;
+    this.patch2.billings = form2.value.billings;
     this.patch2.time = form.value.time2;
 
     this.patch3.price = form.value.price3;
     this.patch3.size = form.value.size3;
     this.patch3.buttons = form.value.buttons3;
-    this.patch3.billings = form.value.billings;
+    this.patch3.billings = form2.value.billings;
     this.patch3.time = form.value.time3;
+
+    this.patch4.price = form.value.price4;
+    this.patch4.size = form.value.size4;
+    this.patch4.buttons = form.value.buttons4;
+    this.patch4.billings = form2.value.billings;
+    this.patch4.time = form.value.time4;
+
+    this.patch5.price = form.value.price5;
+    this.patch5.size = form.value.size5;
+    this.patch5.buttons = form.value.buttons5;
+    this.patch5.billings = form2.value.billings;
+    this.patch5.time = form.value.time5;
+
+    this.patch6.price = form.value.price6;
+    this.patch6.size = form.value.size6;
+    this.patch6.buttons = form.value.buttons6;
+    this.patch6.billings = form2.value.billings;
+    this.patch6.time = form.value.time6;
 
     this.time_usage = '';
     this.compute_best_patch();
