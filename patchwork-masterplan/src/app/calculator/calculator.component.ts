@@ -136,11 +136,32 @@ export class CalculatorComponent implements AfterViewInit {
 
           for (let j = i + 1; j < i+4; j++) {
             if (this.money - this.patches[i].price - this.patches[j].price >= 0) {
-              if (this.patches[i].inner_value + this.patches[j].inner_value > tmp_max) {
-                tmp_max = this.patches[i].inner_value + this.patches[j].inner_value;
-                this.unmark_best_patch();
-                this.patches[i].best_patch = true;
-                this.patches[j].best_patch = true;
+              if (this.distance - this.patches[i].time - this.patches[j].time >= 0) {
+                if (this.patches[i].inner_value + this.patches[j].inner_value > tmp_max) {
+                  tmp_max = this.patches[i].inner_value + this.patches[j].inner_value;
+                  this.unmark_best_patch();
+                  this.patches[i].best_patch = true;
+                  this.patches[j].best_patch = true;
+                }
+
+                for (let k = j + 1; k < j+4; k++) {
+                  if (this.money - this.patches[i].price - this.patches[j].price - this.patches[k].price) {
+                    if (this.patches[i].inner_value + this.patches[j].inner_value + this.patches[k].inner_value > tmp_max) {
+                      tmp_max = this.patches[i].inner_value + this.patches[j].inner_value + this.patches[k].inner_value;
+                      this.unmark_best_patch();
+                      this.patches[i].best_patch = true;
+                      this.patches[j].best_patch = true;
+                      this.patches[k].best_patch = true;
+                    }
+                  }
+                }
+              } else {
+                if (this.patches[i].inner_value + this.patches[j].inner_value > tmp_max) {
+                  tmp_max = this.patches[i].inner_value + this.patches[j].inner_value;
+                  this.unmark_best_patch();
+                  this.patches[i].best_patch = true;
+                  this.patches[j].best_patch = true;
+                }
               }
             }
           }
