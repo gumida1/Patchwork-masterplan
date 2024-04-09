@@ -32,3 +32,8 @@ h6 {
 .text-color {
   color: green;
 }
+
+.ng-invalid {
+  border-color: red; /* Change border color to red */
+  /* You can add more styles here to make it visually indicate the error, such as changing background color, adding an error message, etc. */
+}

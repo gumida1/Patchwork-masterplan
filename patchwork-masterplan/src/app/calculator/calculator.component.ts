@@ -34,6 +34,11 @@ export class CalculatorComponent implements AfterViewInit {
   distance = 0;
   move = false;
   onSubmit(form: NgForm, form2: NgForm) {
+    if (form2.invalid) {
+
+      return;
+    }
+
     this.move = false;
 
     this.patch1.price = form.value.price1;
